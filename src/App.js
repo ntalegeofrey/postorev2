@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import "./App.css";
 import LandingPage from "./pages/LandingPage/LandingPage";
@@ -18,6 +18,9 @@ import MainContainer from "./components/Styles/styledMainContainer";
 import { Box } from "@mui/material";
 
 function App() {
+  const location = useLocation();
+
+  console.log("Current route:", location.pathname);
   return (
     <ThemeCustomization>
       <Toaster />
